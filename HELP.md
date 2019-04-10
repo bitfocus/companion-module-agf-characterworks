@@ -1,4 +1,3 @@
-# companion-module-characterworks
 # Characterworks Companion Module
 v 1.0.1
 3/12/19
