@@ -6,6 +6,7 @@ Eddie Wettach <ewettach@gmail.com>
 
 ## Change Log
 1.0.2 - Added ability to trigger grid buttons
+
 1.0.1 - Initial CW Support - trigger motions and set text functions
 
 ## Requirements:
