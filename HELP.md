@@ -1,7 +1,12 @@
 # Characterworks Companion Module
-v 1.0.1
-3/12/19
+v 1.0.2
+4/16/19
 Eddie Wettach <ewettach@gmail.com>
+
+## Change Log
+1.0.2 - Added ability to trigger grid buttons
+
+1.0.1 - Initial CW Support - trigger motions and set text functions
 
 ## Requirements:
 1.  Companion
@@ -75,6 +80,13 @@ As stated above, you must have the motion running before you can set the text of
 
 Figure 1.5
 ![Image of Running a motion and setting text at same time](https://raidernetwork.org/github/images/runmotion_settext.png)
+
+
+
+### Grid Button
+
+Allows user to specify the button on a Characterworks Grid Controller to play.  Parameters are the name of the Grid (i.e. Grid 1) and the row, column of button.  The first row and first column are (0,0) so be sure that you count from 0 instead of 1.
+
 
 ## References:
 Online documentation on Characterworks:
