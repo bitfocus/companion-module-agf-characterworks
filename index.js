@@ -20,94 +20,94 @@ class instance extends instance_skel {
 	actions(system) {
 		var self = this;
 		self.system.emit('instance_actions', self.id, {
-            'trigger_cw': {
-							label: 'Trigger CharacterWorks',
-							options: [
-								{
-									type: 'dropdown',
-									label: 'Action',
-									id: 'action_dropdown',
-									default: 'play_motions',
-									choices: [
-											{ id: 'play_motions', label: 'play_motions' },
-											{ id: 'stop_motions', label: 'stop_motions' },
-											{ id: 'finish_motions', label: 'finish_motions' }
-									]
-								},
-								{
-									type:  'textinput',
-									label: 'Motion Name',
-									id:    'motion_name',
-									regex: '/^[A-Za-z0-9_\-]*$/'
-								},
-								{
-									type: 'dropdown',
-									label: 'Channel',
-									id: 'channel_dropdown',
-									default: 'preview',
-									choices: [
-										{ id: 'live1', label: 'live1' },
-										{ id: 'live2', label: 'live2' },
-										{ id: 'preview', label: 'preview' }
-									]
-								}
-							]
-						},
-						'set_text': {
-							label: 'Set Text',
-							options: [
-								{
-									type:  'textinput',
-									label: 'Motion Name',
-									id:    'motion_name',
-									width: 12,
-									regex: '/^[A-Za-z0-9_\-]*$/'
-								},
-								{
-									type:  'textinput',
-									label: 'Text Layer',
-									id:    'text_layer',
-									width: 12,
-									default: 'CW text layer variable to replace'
-								},
-								{
-									type:  'textinput',
-									label: 'Text Value',
-									id:    'text_value',
-									width: 12,
-									default: 'Sample Text'
-								},
-								{
-									type: 'dropdown',
-									label: 'Channel',
-									id: 'channel_dropdown',
-									default: 'preview',
-									choices: [
-										{ id: 'live1', label: 'live1' },
-										{ id: 'live2', label: 'live2' },
-										{ id: 'preview', label: 'preview' }
-									]
-								}
-							]
-						},
-						'activate_grid': {
-							label: 'Grid Button',
-							options: [
-								{
-									type:  'textinput',
-									label: 'Grid Name',
-									id:    'grid_name',
-									width: 12
-								},
-								{
-									type:  'textinput',
-									label: 'Grid Cell Coordinates (x,y)',
-									id:    'grid_cell',
-									default: '0,0',
-									regex: '/^[0-9]*(?:,[0-9]*)$/'
-								}
-							]
-						}
+			'trigger_cw': {
+				label: 'Trigger CharacterWorks',
+				options: [
+					{
+						type: 'dropdown',
+						label: 'Action',
+						id: 'action_dropdown',
+						default: 'play_motions',
+						choices: [
+								{ id: 'play_motions', label: 'play_motions' },
+								{ id: 'stop_motions', label: 'stop_motions' },
+								{ id: 'finish_motions', label: 'finish_motions' }
+						]
+					},
+					{
+						type:  'textinput',
+						label: 'Motion Name',
+						id:    'motion_name',
+						regex: '/^[A-Za-z0-9_\-]*$/'
+					},
+					{
+						type: 'dropdown',
+						label: 'Channel',
+						id: 'channel_dropdown',
+						default: 'preview',
+						choices: [
+							{ id: 'live1', label: 'live1' },
+							{ id: 'live2', label: 'live2' },
+							{ id: 'preview', label: 'preview' }
+						]
+					}
+				]
+			},
+			'set_text': {
+				label: 'Set Text',
+				options: [
+					{
+						type:  'textinput',
+						label: 'Motion Name',
+						id:    'motion_name',
+						width: 12,
+						regex: '/^[A-Za-z0-9_\-]*$/'
+					},
+					{
+						type:  'textinput',
+						label: 'Text Layer',
+						id:    'text_layer',
+						width: 12,
+						default: 'CW text layer variable to replace'
+					},
+					{
+						type:  'textinput',
+						label: 'Text Value',
+						id:    'text_value',
+						width: 12,
+						default: 'Sample Text'
+					},
+					{
+						type: 'dropdown',
+						label: 'Channel',
+						id: 'channel_dropdown',
+						default: 'preview',
+						choices: [
+							{ id: 'live1', label: 'live1' },
+							{ id: 'live2', label: 'live2' },
+							{ id: 'preview', label: 'preview' }
+						]
+					}
+				]
+			},
+			'activate_grid': {
+				label: 'Grid Button',
+				options: [
+					{
+						type:  'textinput',
+						label: 'Grid Name',
+						id:    'grid_name',
+						width: 12
+					},
+					{
+						type:  'textinput',
+						label: 'Grid Cell Coordinates (x,y)',
+						id:    'grid_cell',
+						default: '0,0',
+						regex: '/^[0-9]*(?:,[0-9]*)$/'
+					}
+				]
+			}
 		});
 	}
 
@@ -128,17 +128,17 @@ class instance extends instance_skel {
 						"channel": action.options.channel_dropdown
 					}
 			break
-			
+
 			case 'activate_grid':
 					// Put row and column into an array of integers
 					var cw_gridrow=parseInt(action.options.grid_cell.split(",")[0]);
 					var cw_gridcolumn=parseInt(action.options.grid_cell.split(",")[1]);
 					var cw_cell_array=[cw_gridrow, cw_gridcolumn];
-					
+
 					// create JSON data to HTTP Post to CW
 					var requestData= {action: "activate_grid_cell", grid: action.options.grid_name, cell: cw_cell_array};
 			break
-			
+
 			case 'set_text':
 					// create JSON data to HTTP POST to CW
 					var requestData = {
@@ -164,7 +164,7 @@ class instance extends instance_skel {
 						console.log("response.statusText: " + response.statusText)
 					}
 				})
-        
+
 	}
 	// Web config fields
 	config_fields () {

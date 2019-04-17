@@ -1,17 +1,18 @@
 {
-  "name": "agf-characterworks",
-  "version": "1.0.0",
-  "keywords": [
-    "Graphics"
-  ],
-  "manufacturer": "AGF Multimedia",
-  "product": "Characterworks",
-  "shortname": "characterworks",
-  "author": "Eddie Wettach <ewettach@gmail.com>",
-  "description": "Characterworks module for sending Characterworks commands with Companion",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "license": "MIT"
+	"name": "agf-characterworks",
+	"version": "1.0.2",
+	"keywords": [
+		"Graphics"
+	],
+	"manufacturer": "AGF Multimedia",
+	"product": "Characterworks",
+	"shortname": "characterworks",
+	"author": "Eddie Wettach <ewettach@gmail.com>",
+	"description": "Characterworks module for sending Characterworks commands with Companion",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Eddie Wettach <ewettach@gmail.com>",
+	"license": "MIT"
 }
