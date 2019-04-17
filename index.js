@@ -89,6 +89,24 @@ class instance extends instance_skel {
 									]
 								}
 							]
+						},
+						'activate_grid': {
+							label: 'Grid Button',
+							options: [
+								{
+									type:  'textinput',
+									label: 'Grid Name',
+									id:    'grid_name',
+									width: 12
+								},
+								{
+									type:  'textinput',
+									label: 'Grid Cell Coordinates (x,y)',
+									id:    'grid_cell',
+									default: '0,0',
+									regex: '/^[0-9]*(?:,[0-9]*)$/'
+								}
+							]
 						}
 		});
 	}
@@ -105,12 +123,23 @@ class instance extends instance_skel {
 					var requestData = {
 						"action": action.options.action_dropdown,
 						"motions": [
-						action.options.motion_name
+							action.options.motion_name
 						],
 						"channel": action.options.channel_dropdown
 					}
 			break
-			case "set_text":
+			
+			case 'activate_grid':
+					// Put row and column into an array of integers
+					var cw_gridrow=parseInt(action.options.grid_cell.split(",")[0]);
+					var cw_gridcolumn=parseInt(action.options.grid_cell.split(",")[1]);
+					var cw_cell_array=[cw_gridrow, cw_gridcolumn];
+					
+					// create JSON data to HTTP Post to CW
+					var requestData= {action: "activate_grid_cell", grid: action.options.grid_name, cell: cw_cell_array};
+			break
+			
+			case 'set_text':
 					// create JSON data to HTTP POST to CW
 					var requestData = {
 						"action": 'set_text',
