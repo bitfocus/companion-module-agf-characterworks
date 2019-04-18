@@ -23,7 +23,7 @@ class instance extends instance_skel {
 		var self = this;
 
 		self.system.emit('instance_actions', self.id, {
-      'trigger_cw': {
+			'trigger_cw': {
 				label: 'Trigger CharacterWorks',
 				options: [
 					{
@@ -92,6 +92,24 @@ class instance extends instance_skel {
 						]
 					}
 				]
+			},
+			'activate_grid': {
+				label: 'Grid Button',
+				options: [
+					{
+						type:  'textinput',
+						label: 'Grid Name',
+						id:    'grid_name',
+						width: 12
+					},
+					{
+						type:  'textinput',
+						label: 'Grid Cell Coordinates (x,y)',
+						id:    'grid_cell',
+						default: '0,0',
+						regex: '/^\\d+,\\d+$/'
+					}
+				]
 			}
 		});
 	}
@@ -123,6 +141,20 @@ class instance extends instance_skel {
 				};
 				break;
 
+			case 'activate_grid':
+				// Put row and column into an array of integers
+				var data = action.options.grid_cell.split(',');
+				var cw_gridrow = parseInt(data[0]);
+				var cw_gridcolumn = parseInt(data[1]);
+				var cw_cell_array = [cw_gridrow, cw_gridcolumn];
+
+				// create JSON data to HTTP Post to CW
+				var requestData= {
+					action: "activate_grid_cell",
+					grid: action.options.grid_name,
+					cell: cw_cell_array
+				};
+				break;
 		}
 
 		// Send the request to Characterworks
@@ -140,7 +172,6 @@ class instance extends instance_skel {
 				debug("response.statusText: " + response.statusText);
 			}
 		});
-
 	}
 
 	// Web config fields
