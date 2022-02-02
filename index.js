@@ -22,7 +22,7 @@ class instance extends instance_skel {
 	actions(system) {
 		var self = this;
 
-		self.system.emit('instance_actions', self.id, {
+		self.setActions({
 			'trigger_cw': {
 				label: 'Trigger CharacterWorks',
 				options: [
