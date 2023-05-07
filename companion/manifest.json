@@ -1,0 +1,26 @@
+{
+	"id": "agf-characterworks",
+	"name": "AGF Characterworks",
+	"shortname": "characterworks",
+	"description": "For sending basic commands to a Characterworks",
+	"version": "1.0.3",
+	"license": "MIT",
+	"repository": "git+https://github.com/bitfocus/companion-module-your-module-name.git",
+	"bugs": "https://github.com/bitfocus/companion-module-your-module-name/issues",
+	"maintainers": [
+		{
+			"name": "Eddie Wettach",
+			"email": "ewettach@gmail.com"
+		}
+	],
+	"runtime": {
+		"type": "node18",
+		"api": "nodejs-ipc",
+		"apiVersion": "0.0.0",
+		"entrypoint": "../main.js"
+	},
+	"legacyIds": [],
+	"manufacturer": "AGF",
+	"products": ["Characterworks"],
+	"keywords": []
+}
