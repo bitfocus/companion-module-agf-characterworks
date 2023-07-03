@@ -3,7 +3,7 @@
 	"name": "AGF Characterworks",
 	"shortname": "characterworks",
 	"description": "For sending basic commands to a Characterworks",
-	"version": "1.0.3",
+	"version": "2.0.0",
 	"license": "MIT",
 	"repository": "git+https://github.com/bitfocus/companion-module-your-module-name.git",
 	"bugs": "https://github.com/bitfocus/companion-module-your-module-name/issues",

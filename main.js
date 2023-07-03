@@ -5,6 +5,7 @@ const UpdateFeedbacks = require('./feedbacks')
 const UpdateVariableDefinitions = require('./variables')
 const http = require('http')
 
+
 class ModuleInstance extends InstanceBase {
 	constructor(internal) {
 		super(internal)

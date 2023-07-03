@@ -1,3 +1,3 @@
-# companion-module-[daktronics-dmp]
+# companion-module-[agf-characterworks]
 
 See [HELP.md](./companion/HELP.md) and [LICENSE](./LICENSE)

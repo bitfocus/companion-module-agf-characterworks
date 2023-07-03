@@ -1,14 +1,13 @@
 # Characterworks Companion Module
 
-v 1.0.3<br>
+v 2.0.0<br>
 5/6/23<br>
 Eddie Wettach <ewettach@gmail.com>
 
 ## Change Log
 
-1.0.3 - Added support for Companion version 3
-1.0.2 - Added ability to trigger grid buttons
-
+2.0.0 - Added support for Companion version 3 <br>
+1.0.2 - Added ability to trigger grid buttons<br>
 1.0.1 - Initial CW Support - trigger motions and set text functions
 
 ## Requirements:
@@ -39,9 +38,6 @@ Allows user to play, finish, or stop motions on a certain channel.
 - **Motion Name**: The name of the motion within Characterworks you which to trigger.
 - **Channel**: The channel (preview, live1, or live2) that you want the trigger to output on
 
-Figure 1.1
-![Image of CW Trigger](https://raidernetwork.org/github/images/trigger_characterworks.png)
-
 Example:
 Action: play_motions *This is the command you want to send to the motion
 Motion Name: scorebug *This is the name of the motion file that you create within Characterworks
@@ -54,9 +50,6 @@ Allows user to set the text of a motion that is already online.
 
 In this section, we will be using a motion that is set up such as the one in the picture below for a reference:
 
-Figure 1.2
-![Image of CW Trigger](https://raidernetwork.org/github/images/cw-comp.png)
-
 #### Parameters:
 
 - **Motion Name**: The name of the motion within Characterworks you which to set text on.
@@ -64,21 +57,12 @@ Figure 1.2
 - **Text Value**: The actual string of text you wish to display
 - **Channel**: The channel (preview, live1, or live2) that you want the trigger to output on
 
-Figure 1.3
-![Figure 1.3](https://raidernetwork.org/github/images/set_text_nocompositions.png)
-
-Figure 1.4
-![Figure 1.4](https://raidernetwork.org/github/images/set_text_onecomposition.png)
-
 Example:
 Action: play_motions *This is the command you want to send to the motion
 Motion Name: scorebug *This is the name of the motion file that you create within Characterworks
 Channel: preview \*This is the channel you want to output the graphic on
 
 As stated above, you must have the motion running before you can set the text of it. Below is an example of how using a delay (you may need to adjust the delay depending on network performance) will allow you to execute a play_motion and a set_text all on one button press.
-
-Figure 1.5
-![Image of Running a motion and setting text at same time](https://raidernetwork.org/github/images/runmotion_settext.png)
 
 ### Grid Button
 
