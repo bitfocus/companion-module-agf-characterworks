@@ -12,11 +12,14 @@ module.exports = function (self) {
 						{ id: 'play_motions', label: 'play_motions' },
 						{ id: 'stop_motions', label: 'stop_motions' },
 						{ id: 'finish_motions', label: 'finish_motions' },
+						{ id: 'pause_motions', label: 'pause_motions' },
+						
 					],
 				},
 				{
 					type: 'textinput',
 					label: 'Motion Name',
+					tooltip: 'Separate multiple motions with comma (e.g., motion_1, motion_2)',
 					id: 'motion_name',
 					regex: '/^[A-Za-z0-9_-]*$/',
 				},

@@ -73,7 +73,7 @@ class ModuleInstance extends InstanceBase {
 				// create JSON data to HTTP POST to CW
 				var requestJSON = {
 					action: action.options.action_dropdown,
-					motions: [action.options.motion_name],
+					motions: action.options.motion_name.split(',').map(item=>item.trim()),
 					channel: action.options.channel_dropdown,
 				}
 				break
