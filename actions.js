@@ -19,7 +19,7 @@ module.exports = function (self) {
 				{
 					type: 'textinput',
 					label: 'Motion Name',
-					tooltip: 'Separate multiple motions with , (comma)',
+					tooltip: 'Separate multiple motions with comma (e.g., motion_1, motion_2)',
 					id: 'motion_name',
 					regex: '/^[A-Za-z0-9_-]*$/',
 				},
