@@ -5,8 +5,8 @@
 	"description": "For sending basic commands to a Characterworks",
 	"version": "2.0.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/companion-module-your-module-name.git",
-	"bugs": "https://github.com/bitfocus/companion-module-your-module-name/issues",
+	"repository": "git+https://github.com/bitfocus/companion-module-agf-characterworks.git",
+	"bugs": "https://github.com/bitfocus/companion-module-agf-characterworks/issues",
 	"maintainers": [
 		{
 			"name": "Eddie Wettach",
