@@ -1,28 +1,22 @@
 # Characterworks Companion Module
 
-v 2.0.1<br>
-5/6/23<br>
-Eddie Wettach <ewettach@gmail.com>
-
 ## Change Log
 
-2.0.1 - Added ability to trigger multiple motions in one request<br>
-2.0.0 - Added support for Companion version 3 <br>
-1.0.2 - Added ability to trigger grid buttons<br>
-1.0.1 - Initial CW Support - trigger motions and set text functions
+* 2.0.1 - Added ability to trigger multiple motions in one request
+* 2.0.0 - Added support for Companion version 3
+* 1.0.2 - Added ability to trigger grid buttons
+* 1.0.1 - Initial CW Support - trigger motions and set text functions
 
 ## Requirements:
-
-1.  Companion
-2.  Characterworks 3.7 (it may work on other versions as well)
+* Companion
+* Characterworks 3.7 (it may work on other versions as well)
 
 ## How to:
-
-1.  Add an instance of Characterworks to Companion.
-2.  Configure the IP address of the server running Characterworks
-3.  Configure the port number of the server running Characterworks (default is 5201)
-4.  Configure a button with the action Trigger Characterworks or Set_text in Characterworks Motion
-5.  Follow more specific steps below under "Actions" depending on what you selected in the above #4
+1. Add an instance of Characterworks to Companion.
+2. Configure the IP address of the server running Characterworks
+3. Configure the port number of the server running Characterworks (default is 5201)
+4. Configure a button with the action Trigger Characterworks or Set_text in Characterworks Motion
+5. Follow more specific steps below under "Actions" depending on what you selected in the above #4
 
 ## Actions:
 
@@ -71,6 +65,6 @@ Allows user to specify the button on a Characterworks Grid Controller to play. P
 
 ## References:
 
-Online documentation on Characterworks:
-https://www.chrworks.com/help/
+[Online documentation on Characterworks](https://www.chrworks.com/help/)
+
 Details on what Characterworks will respond to via HTTP POST requests can be found under the heading REMOTE CONTROL within Characterworks Online Help
